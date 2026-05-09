@@ -1,33 +1,84 @@
-import { Component } from '@angular/core';
+
+
+import { Component, OnInit } from '@angular/core';
+import { postsData } from './consts/posts';
+import { Ipost } from './models/posts';
+import { stdArr } from './consts/student';
+import { countries } from './consts/country';
+import { rivers } from './consts/river';
+import { hospitals } from './consts/hospital';
+import { doctors } from './consts/doctor';
+import { employees } from './consts/employee';
+import { products } from './consts/product';
+import { books } from './consts/books';
+import { movies } from './consts/movies';
+import { mobiles } from './consts/mobile';
+import { cars } from './consts/cars';
+import { courses } from './consts/courses';
+import { colleges } from './consts/colleges';
+import { teachers } from './consts/teacher';
+import { cities } from './consts/city';
+import { schools } from './consts/school';
+import { flights } from './consts/flights';
+import { restaurants } from './consts/resta';
+import { banks } from './consts/bank';
+import { laptops } from './consts/laptop';
+import { universities } from './consts/univercity';
+import { buses } from './consts/bus';
+import { gyms } from './consts/gym';
+import { cricketPlayers } from './consts/player';
+import { companies } from './consts/company';
+import { animals } from './consts/animal';
+import { festivals } from './consts/festival';
+import { footballTeams } from './consts/team';
+import { planets } from './consts/planet';
+import { trains } from './consts/train';
+
+
+
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  heading= '10 EXAMPLE';
-  color1= 'red';
-  color2= 'pink';
-  color3= 'orange';
-  firstname:string= 'JAVASCRIPT'
-n1:number=2;
-n2:number=3;
-  name= 'Rahul';
-  fname="Jhon";
-lname= "Doe";
-  title = 'hello Angular';
-  userName:string= `I am Jhon`;
-  userId:number= 1234567;
-  index: number=9;
-  select: boolean=true;
-  email: string='md@gmail.com';
-  skill: string="Javascript";
-  skills:Array<string>=['Html', 'Css', 'JS', 'TS'];
-  fruits:Array<string>= ["Apple","Banana", "Mango", "Orange"];
-  colors:Array<string>=['red', 'yellow', 'orange'];
-  ids: Array<number>= [1, 2, 3, 4];
-  vegetables:Array<string> = ['Potato','Tomato', 'Onion', 'Cabbage'];
-animals:Array<string> = ['Dog', 'Cat', 'Lion', 'Tiger', 'Elephant'];
-countries:Array<string> = ['India', 'USA', 'Canada', 'Australia', 'Germany'];
+export class AppComponent implements OnInit {
+
+doctor=doctors
+hospital=hospitals
+rive=rivers
+  postsArr : Array<Ipost> = postsData
+ stdsArr=stdArr
+ country=countries
+ employee=employees
+ product=products
+ book=books
+ movie=movies
+ mob=mobiles
+ car=cars
+course=courses
+college=colleges
+teacher=teachers
+city=cities
+school=schools
+flight=flights
+resta=restaurants
+bank=banks
+laptop=laptops
+univercity=universities
+bus=buses
+gym=gyms
+player=cricketPlayers
+company=companies
+animal=animals
+festival=festivals
+team=footballTeams
+planet=planets
+train=trains
+
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
 }

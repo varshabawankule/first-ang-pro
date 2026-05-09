@@ -1,81 +1,904 @@
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="bg-danger text-white">{{heading}}</h2>
-            <h3>
-                {{ title }}
-            </h3>
+ 
+ 
+ <div class="container">
+    <p class="bg-danger text-white fa-2x text-center">Task 1</p>
+     <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr class="text-primary">
+                <th>id</th>
+                <th>Country Name</th>
+                <th>Email</th>
+                <th>Capital Currency</th>
+                <th>population</th>
+                <th>Edit</th>
+                <th>Remove</th>
 
-            <input [value]="userName" type="text" class="form-control">
-        <hr>
+             
+             </tr>
+        </thead>
+        <tbody>
 
-        <ul class="list-group">
-            <li *ngFor="let skill of skills" class="list-group-item bg-success text-white">
+            <tr *ngFor="let count of country">
+                <td>{{count.id}}</td>
+                <td>{{count.countryName}}</td>
+                <td>{{count.capital}}</td>
+                <td>{{count.currency}}</td>
+                <td>{{count.population}}</td>
 
-                I Love {{skill}}
-            </li>
-        </ul>
+                <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <p class="bg-danger text-white fa-2x text-center">Task 2</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+            <th>id</th>
+            <th>riverName</th>
+            <th>Country</th>
+            <th>length</th>
+            <th>origin</th>
+            <th>Edit</th>
+            <th>Remove</th>
+ </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let riv of rive">
+                <td>{{riv.id}}</td>
+                <td>{{riv.riverName}}</td>
+                <td>{{riv.country}}</td>
+                <td>{{riv.length}}</td>
+                <td>{{riv.origin}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            </tr>
+        </tbody>
+
+    </table>
+    <hr>
+    <p class="bg-danger text-white fa-2x text-center">Task 3</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>hospital Name</th>
+                <th>city</th>
+                <th>Speaciality</th>
+                <th>Contact</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let hosp of hospital">
+                <td>{{hosp.id}}</td>
+                <td>{{hosp.hospitalName}}</td>
+                <td>{{hosp.city}}</td>
+                <td>{{hosp.specialty}}</td>
+                <td>{{hosp.contact}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+               
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <p class="bg-danger text-white fa-2x text-center">Task 4</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Doctor Name</th>
+                <th>Specialization</th>
+                <th>Hospital</th>
+                <th>Experiance</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let doc of doctor">
+                <td>{{doc.id}}</td>
+                <td>{{doc.doctorName}}</td>
+                <td>{{doc.specialization}}</td>
+                <td>{{doc.hospital}}</td>
+                <td>{{doc.experience}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
 <hr>
-   <p>1]Welcome {{name }}</p> 
-   <p>2]Welcome {{fname}} {{lname}}</p>
-   <p>3]I Like {{color1}}, {{color2}}, {{color3}} colors but {{color1}} is my favourite color.</p>
-   
-   <hr>
-   <div class="form-group">
-   <input [value]="userId" type="text" class="form-control">
+    <p class="bg-danger text-white fa-2x text-center">Task 5</p>
+    
+ <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr class="text-primary">
+                <th>Sr No.</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Edit</th>
+                <th>Remove</th>
+             </tr>
+        </thead>
+        <tbody>
 
-<br>
-<input [value]="select" type="text" class="form-control">
-<input [value]="email" type="text" class="form-control">
-   </div>
+            <tr *ngFor="let std of stdsArr;index as i">
+                <td>{{i+1}}</td>
+                <td>{{std.fname}}{{std.lname}}</td>
+                <td>{{std.email}}</td>
+                <td>{{std.contact}}</td>
+                <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            </tr>
+        </tbody>
+    </table>
+  <hr>
+  
+    <p class="bg-danger text-white fa-2x text-center">Task 6</p>
 
-   <h3>hello {{firstname}}</h3>
-   <button (click)="firstname= 'ANGULAR'" class="btn btn-primary">Reset</button>
-   
-   <!-- <p><strong>{{skill}}</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, numquam rerum nemo quos tempora odit.</p>
-   <button (click)="skill= 'ANGULAR'" class="btn btn-primary btn-block">ANGULAR</button> -->
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Employee Name</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>City</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employee">
+                <td>{{emp.id}}</td>
+                <td>{{emp.empName}}</td>
+                <td>{{emp.department}}</td>
+                <td>{{emp.salary}}</td>
+                <td>{{emp.city}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <p class="bg-danger text-white fa-2x text-center">Task 7</p>
 
-<hr>
-   
-        <ul class="list-group">
-            <li *ngFor="let fruit of fruits" class="list-group-item bg-primary text-white">
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let prd of product">
+                <td>{{prd.id}}</td>
+                <td>{{prd.productName}}</td>
+                <td>{{prd.category}}</td>
+                <td>{{prd.price}}</td>
+                <td>{{prd.stock}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 8</p>
 
-                I like {{fruit}}
-            </li>
-        </ul>
-<hr>
-<ul class="list-group">
-    <li *ngFor="let color of colors" class="list-group-item bg-secondary text-white">
-        {{color}}
-    </li>
-</ul>
-<hr>
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>language</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bk of book">
+                <td>{{bk.id}}</td>
+                <td>{{bk.bookName}}</td>
+                <td>{{bk.author}}</td>
+                <td>{{bk.price}}</td>
+                <td>{{bk.language}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 9</p>
 
-<ul class="list-group">
-    <li *ngFor="let id of ids" class="list-group-item bg-secondary text-white">
-        {{id}}
-    </li>
-</ul>
-<hr>
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Movie Name</th>
+                <th>Hero</th>
+                <th>Genre</th>
+                <th>releaseYear</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let mv of movie">
+                <td>{{mv.id}}</td>
+                <td>{{mv.movieName}}</td>
+                <td>{{mv.hero}}</td>
+                <td>{{mv.genre}}</td>
+                <td>{{mv.releaseYear}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 10</p>
 
-<ul class="list-group">
-    <li *ngFor="let vege of vegetables" class="list-group-item bg-primary text-white">
-{{vege}}
-    </li>
-</ul>
-<hr>
-<ul class="list-group">
-    <li *ngFor="let animal of animals" class="list-group-item bg-info text-dark">
-{{animal}}
-    </li>
-</ul>
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Mobile Name</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>RAM</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let mb of mob">
+                <td>{{mb.id}}</td>
+                <td>{{mb.mobileName}}</td>
+                <td>{{mb.brand}}</td>
+                <td>{{mb.price}}</td>
+                <td>{{mb.ram}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 11</p>
 
-<ul class="list-group">
-    <li *ngFor="let country of countries" class="list-group-item bg-danger text-white">
-        {{country}}
-    </li>
-</ul>
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Car Name</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Fueltype</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of car">
+                <td>{{c.id}}</td>
+                <td>{{c.carName}}</td>
+                <td>{{c.brand}}</td>
+                <td>{{c.price}}</td>
+                <td>{{c.fuelType}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 12</p>
 
-</div>
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Course Name</th>
+                <th>Trainer</th>
+                <th>Duration</th>
+                <th>Fees</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cor of course">
+                <td>{{cor.id}}</td>
+                <td>{{cor.courseName}}</td>
+                <td>{{cor.trainer}}</td>
+                <td>{{cor.duration}}</td>
+                <td>{{cor.fees}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 13</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>College Name</th>
+                <th>City</th>
+                <th>Course</th>
+                <th>Ranking</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let clg of college">
+                <td>{{clg.id}}</td>
+                <td>{{clg.collegeName}}</td>
+                <td>{{clg.city}}</td>
+                <td>{{clg.course}}</td>
+                <td>{{clg.ranking}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 14</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Teacher Name</th>
+                <th>Subject</th>
+                <th>Experiance/th>
+                <th>Salary</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tchr of teacher">
+                <td>{{tchr.id}}</td>
+                <td>{{tchr.teacherName}}</td>
+                <td>{{tchr.subject}}</td>
+                <td>{{tchr.experience}}</td>
+                <td>{{tchr.salary}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 15</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>City Name</th>
+                <th>State</th>
+                <th>Population</th>
+                <th>FamousFor</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ct of city">
+                <td>{{ct.id}}</td>
+                <td>{{ct.cityName}}</td>
+                <td>{{ct.state}}</td>
+                <td>{{ct.population}}</td>
+                <td>{{ct.famousFor}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 16</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>School Name</th>
+                <th>City</th>
+                <th>Board</th>
+                <th>Student</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let sch of school">
+                <td>{{sch.id}}</td>
+                <td>{{sch.schoolName}}</td>
+                <td>{{sch.city}}</td>
+                <td>{{sch.board}}</td>
+                <td>{{sch.students}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 17</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Flight Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>TicketPrice</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let flt of flight">
+                <td>{{flt.id}}</td>
+                <td>{{flt.flightName}}</td>
+                <td>{{flt.source}}</td>
+                <td>{{flt.destination}}</td>
+                <td>{{flt.ticketPrice}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <p class="bg-danger text-white fa-2x text-center">Task 18</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Restaurant Name</th>
+                <th>City</th>
+                <th>Cuisine</th>
+                <th>Rating</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let rest of resta">
+                <td>{{rest.id}}</td>
+                <td>{{rest.restaurantName}}</td>
+                <td>{{rest.city}}</td>
+                <td>{{rest.cuisine}}</td>
+                <td>{{rest.rating}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 19</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Bank Name</th>
+                <th>Branch</th>
+                <th>IFSC code</th>
+                <th>Customer Count</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bnk of bank">
+                <td>{{bnk.id}}</td>
+                <td>{{bnk.bankName}}</td>
+                <td>{{bnk.branch}}</td>
+                <td>{{bnk.ifscCode}}</td>
+                <td>{{bnk.customerCount}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 20</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Laptop Name</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>RAM</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let lp of laptop">
+                <td>{{lp.id}}</td>
+                <td>{{lp.laptopName}}</td>
+                <td>{{lp.brand}}</td>
+                <td>{{lp.price}}</td>
+                <td>{{lp.ram}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 21</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>University Name</th>
+                <th>City</th>
+                <th>Established Year</th>
+                <th>Type</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let uni of univercity">
+                <td>{{uni.id}}</td>
+                <td>{{uni.universityName}}</td>
+                <td>{{uni.city}}</td>
+                <td>{{uni.establishedYear}}</td>
+                <td>{{uni.type}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 22</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Bus Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Ticket Price</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let b of bus">
+                <td>{{b.id}}</td>
+                <td>{{b.busName}}</td>
+                <td>{{b.source}}</td>
+                <td>{{b.destination}}</td>
+                <td>{{b.ticketPrice}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 23</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Gym Name</th>
+                <th>City</th>
+                <th>Monthly Fees</th>
+                <th>Trainer Available</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let g of gym">
+                <td>{{g.id}}</td>
+                <td>{{g.gymName}}</td>
+                <td>{{g.city}}</td>
+                <td>{{g.monthlyFee}}</td>
+                <td>{{g.trainerAvailable}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <p class="bg-danger text-white fa-2x text-center">Task 24</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Player Name</th>
+                <th>Country/th>
+                <th>Role</th>
+                <th>Matches</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of player">
+                <td>{{p.id}}</td>
+                <td>{{p.playerName}}</td>
+                <td>{{p.country}}</td>
+                <td>{{p.role}}</td>
+                <td>{{p.matches}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 25</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Company Name</th>
+                <th>Industry</th>
+                <th>Headquarters</th>
+                <th>Employees</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let comp of company">
+                <td>{{comp.id}}</td>
+                <td>{{comp.companyName}}</td>
+                <td>{{comp.industry}}</td>
+                <td>{{comp.headquarters}}</td>
+                <td>{{comp.employees}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 26</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Animal Name</th>
+                <th>Type</th>
+                <th>Life Span</th>
+                <th>Habitat</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ani of animal">
+                <td>{{ani.id}}</td>
+                <td>{{ani.animalName}}</td>
+                <td>{{ani.type}}</td>
+                <td>{{ani.lifespan}}</td>
+                <td>{{ani.habitat}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 27</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Festival Name</th>
+                <th>Country/th>
+                <th>Month</th>
+                <th>Type</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fes of festival">
+                <td>{{fes.id}}</td>
+                <td>{{fes.festivalName}}</td>
+                <td>{{fes.country}}</td>
+                <td>{{fes.month}}</td>
+                <td>{{fes.type}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 28</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Team Name</th>
+                <th>Country</th>
+                <th>Trophies</th>
+                <th>Stadium</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of team">
+                <td>{{t.id}}</td>
+                <td>{{t.teamName}}</td>
+                <td>{{t.country}}</td>
+                <td>{{t.trophies}}</td>
+                <td>{{t.stadium}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 29</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Planet Name</th>
+                <th>PositionFromSun</th>
+                <th>Type</th>
+                <th>Moons</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of planet">
+                <td>{{p.id}}</td>
+                <td>{{p.planetName}}</td>
+                <td>{{p.positionFromSun}}</td>
+                <td>{{p.type}}</td>
+                <td>{{p.moons}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    
+    <p class="bg-danger text-white fa-2x text-center">Task 30</p>
+
+    <table class="table table-bordered bg-dark text-white">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Train Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Coaches</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of train">
+                <td>{{t.id}}</td>
+                <td>{{t.trainName}}</td>
+                <td>{{t.source}}</td>
+                <td>{{t.destination}}</td>
+                <td>{{t.coaches}}</td>
+                 <td class="text-center"><i class="fa-solid fa-pen-to-square fa-2x  text-primary" role="button"></i></td>
+                <td class="text-center"><i class="fa-solid fa-trash fa-2x text-danger" role="button"></i></td>
+            
+            </tr>
+        </tbody>
+    </table>
+
+
+<div class="row">
+    <div class="col-md-4 mb-3" *ngFor="let post of postsArr">
+        <div  class="card h-100">
+            <div class="card-header">
+                <h3>{{post.title}}</h3>
+            </div> 
+           <div class="card-body">
+                <p>{{post.body}}</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-primary">Edit</button>
+                <button class="btn btn-sm btn-outline-danger">Remove</button>
+
+            </div>
+        </div>
     </div>
 </div>
+</div> 
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
